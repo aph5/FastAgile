@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration.Tests", "Integr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastAgile.Web.Tests", "tests\FastAgile.Web.Tests\FastAgile.Web.Tests.csproj", "{5ADDE732-75BD-42B6-A643-4FEF236865CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{15D7310B-6704-42A8-8C41-5EB5F76E0FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ncqrs.Spec.Xunit", "packages\ncqrs\Ncqrs.Spec.Xunit\Ncqrs.Spec.Xunit.csproj", "{AA90754B-CA47-429E-BDC8-2A83E94179B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{5ADDE732-75BD-42B6-A643-4FEF236865CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ADDE732-75BD-42B6-A643-4FEF236865CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ADDE732-75BD-42B6-A643-4FEF236865CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA90754B-CA47-429E-BDC8-2A83E94179B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA90754B-CA47-429E-BDC8-2A83E94179B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA90754B-CA47-429E-BDC8-2A83E94179B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA90754B-CA47-429E-BDC8-2A83E94179B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +76,6 @@ Global
 		{5ADDE732-75BD-42B6-A643-4FEF236865CE} = {5D06939E-C534-4D92-A250-A0D6CF67F7BB}
 		{EAA3D489-89AE-4C1A-9717-3BC48A4F5EC4} = {864240D8-085F-4571-A711-710245432661}
 		{3BAFA915-8FE1-4680-B4D0-38813DFA2BFD} = {864240D8-085F-4571-A711-710245432661}
+		{AA90754B-CA47-429E-BDC8-2A83E94179B7} = {15D7310B-6704-42A8-8C41-5EB5F76E0FCA}
 	EndGlobalSection
 EndGlobal
