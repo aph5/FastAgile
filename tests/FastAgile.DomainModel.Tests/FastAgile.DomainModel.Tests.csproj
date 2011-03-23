@@ -31,14 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
+    <Reference Include="Ncqrs">
+      <HintPath>..\..\packages\ncqrs\Ncqrs\Ncqrs.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.mocks">
-      <HintPath>..\..\packages\NUnit.2.5.9.10348\lib\nunit.mocks.dll</HintPath>
-    </Reference>
-    <Reference Include="pnunit.framework">
-      <HintPath>..\..\packages\NUnit.2.5.9.10348\lib\pnunit.framework.dll</HintPath>
+    <Reference Include="Ncqrs.CommandService">
+      <HintPath>..\..\packages\ncqrs\Ncqrs.CommandService\Ncqrs.CommandService.dll</HintPath>
     </Reference>
     <Reference Include="Should">
       <HintPath>..\..\packages\Should.1.1.12.0\lib\Should.dll</HintPath>
@@ -50,12 +47,27 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\..\packages\xunit.1.7.0.1540\lib\xunit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Projects\when_creating_new_project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\FastAgile.DomainModel\FastAgile.DomainModel.csproj">
+      <Project>{35E04C60-6302-4989-848B-FE57F2E772C1}</Project>
+      <Name>FastAgile.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\packages\ncqrs\Ncqrs.Spec.Xunit\Ncqrs.Spec.Xunit.csproj">
+      <Project>{AA90754B-CA47-429E-BDC8-2A83E94179B7}</Project>
+      <Name>Ncqrs.Spec.Xunit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

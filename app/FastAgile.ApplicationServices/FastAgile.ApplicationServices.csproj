@@ -31,8 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.4.1.10311.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ncqrs">
+      <HintPath>..\..\packages\ncqrs\Ncqrs\Ncqrs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +50,19 @@
   <ItemGroup>
     <Compile Include="Denormalizers\ProjectDenormalizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FastAgile.DomainModel\FastAgile.DomainModel.csproj">
+      <Project>{35E04C60-6302-4989-848B-FE57F2E772C1}</Project>
+      <Name>FastAgile.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FastAgile.ReadModel\FastAgile.ReadModel.csproj">
+      <Project>{198990C2-6287-40AC-8DFF-666B5A414FD4}</Project>
+      <Name>FastAgile.ReadModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
