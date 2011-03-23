@@ -31,14 +31,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\..\packages\FluentAssertions.1.4.0.0\Lib\.NetFramework 4.0\FluentAssertions.dll</HintPath>
+    </Reference>
     <Reference Include="Ncqrs">
       <HintPath>..\..\packages\ncqrs\Ncqrs\Ncqrs.dll</HintPath>
     </Reference>
     <Reference Include="Ncqrs.CommandService">
       <HintPath>..\..\packages\ncqrs\Ncqrs.CommandService\Ncqrs.CommandService.dll</HintPath>
     </Reference>
-    <Reference Include="Should">
-      <HintPath>..\..\packages\Should.1.1.12.0\lib\Should.dll</HintPath>
+    <Reference Include="Ncqrs.Spec">
+      <HintPath>..\..\packages\ncqrs\Ncqrs.Spec\Ncqrs.Spec.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\ncqrs\Ncqrs.Spec\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,9 +53,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
-      <HintPath>..\..\packages\xunit.1.7.0.1540\lib\xunit.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
@@ -63,10 +66,6 @@
     <ProjectReference Include="..\..\app\FastAgile.DomainModel\FastAgile.DomainModel.csproj">
       <Project>{35E04C60-6302-4989-848B-FE57F2E772C1}</Project>
       <Name>FastAgile.DomainModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\packages\ncqrs\Ncqrs.Spec.Xunit\Ncqrs.Spec.Xunit.csproj">
-      <Project>{AA90754B-CA47-429E-BDC8-2A83E94179B7}</Project>
-      <Name>Ncqrs.Spec.Xunit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

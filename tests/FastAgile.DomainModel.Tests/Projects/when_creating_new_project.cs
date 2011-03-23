@@ -7,8 +7,8 @@ using FastAgile.DomainModel.Events;
 using Ncqrs;
 using Ncqrs.Spec;
 using Ncqrs.Spec.Fakes;
-using Ncqrs.Spec.Xunit;
-using Xunit;
+using NUnit.Framework;
+using FluentAssertions;
 
 namespace FastAgile.DomainModel.Tests.Projects
 {
@@ -53,12 +53,12 @@ namespace FastAgile.DomainModel.Tests.Projects
                        };
         }
 
-        [Fact]
+        [Test]
         public void The_project_name_should_have_the_correct_values()
         {
-            Assert.Equal(TheEvent.ProjectId, EventSourceId);
-            Assert.Equal(TheEvent.ProjectName, ProjectName);
-            Assert.Equal(TheEvent.ProjectDescription, ProjectDescription);
+            Assert.AreEqual(TheEvent.ProjectId, EventSourceId);
+            Assert.AreEqual(TheEvent.ProjectName, ProjectName);
+            Assert.AreEqual(TheEvent.ProjectDescription, ProjectDescription);
         }
     }
 }
